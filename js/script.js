@@ -1,21 +1,30 @@
-var a = prompt( 'Введите  число', '' );
-var b = prompt( 'Введите  степень', '' );
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            oldonload();
+            func();
+        }
+    }
+}
 
-function pow( a, b ) {
-  var result = 1;
-  
-  if (b < 0) {
-    return 1 / pow(a, -b);
-  }
-  
-  for( var i = 0; i < b; i++ ) {
-    result *= a;
-  }  
-  
-  return result;  
- }
+function myInputs() {
+    var inputs = document.getElementsByTagName("input");
+    for (var i=0; i<inputs.length; i++){
+               if (inputs[i].parentNode.getElementsByTagName("span")[0]) {
 
+            inputs[i].onfocus = function () {
+                this.parentNode.getElementsByTagName("span")[0].style.display = "inline";
+            }
 
-var bigResult = pow( a, b );
-console.log( bigResult );
+            inputs[i].onblur = function () {
+                this.parentNode.getElementsByTagName("span")[0].style.display = "none";
+            }
+        }
+    }
+
+}
+addLoadEvent(myInputs);
 
