@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function () {
+	$('a').on('click', function (e) {
+		e.preventDefault();
+	});
+
+	var $dropItem = $('.dropdown');
+	var $subMenu = $('.submenu');
+		$dropItem.hover(
+			function(){
+				$(this).children('.submenu')
+				.animate({height: '245px', backgroundColor: 'rgb(255, 80, 90)'}, 600)
+				.show();
+			},
+			function () {
+				$(this).children('.submenu')
+				.animate({height: '0', backgroundColor: 'rgba(225,75,125,0.75)'}, 400)
+				.hide(0);
+			});
+	
+})
+</script>
+    </head>
+       <body>
+<div class="wrapper">
+		<nav>
+	            <ul class="content">
+				<li><a href="#">Travels</a></li>
+				<li class="dropdown"><a href="#">Offices<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+					<ul class="submenu">
+						<li><a href="#">New-York</a></li>
+						<li><a href="#">California</a></li>
+						<li class="dropdown"><a href="#">Paris
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+								<ul class="submenu submenu-second">
+									<li><a href="#">Glass</a></li>
+									<li><a href="#">Painting</a></li>
+									<li><a href="#">Sketches</a></li>
+									<li><a href="#">Trend</a></li>
+									<li><a href="#">Origammy</a></li>
+								</ul>
+							</li>
+						<li><a href="#">Germany</a></li>
+						<li><a href="#">Holland</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Exhabition</a></li>
+				<li><a href="#">Canvases</a></li>
+				<li><a href="#">Work</a></li>
+			   </ul>
+		     </nav>
+	      </div>
+       </body>
+</html>

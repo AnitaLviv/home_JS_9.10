@@ -1,41 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet"  href="css/style.css">
-    <title>Title</title>
+	<title>Java Script</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      	<script src="js/carousel.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/carousel.css">
 </head>
 <body>
-<div class = "wrap">
-<dl>
-    <dt>
-        <label for="firstname">First Name:</label>
-    </dt>
-    <dd>
-        <input name="firstname" id="firstname" type="text" />
-        <span class="hint">Please put your name.<span class="hint-pointer">&nbsp;</span></span>
-    </dd>
-    <dt>
-        <label for="lastname">Last Name:</label>
-    </dt>
-    <dd>
-        <input name="lastname" id="lastname" type="text" />
-        <span class="hint">Please put your second name.<span class="hint-pointer">&nbsp;</span></span>
-    </dd>
-    <dt>
-        <label for="email">Email:</label>
-    </dt>
-    <dd>
-        <input name="email" id="email" type="text" />
-        <span class="hint">Please write your email.</span>
-    </dd>
-    <span class="hint">Pick a famous year to be born in.<span class="hint-pointer">&nbsp;</span></span></dl>
+<div class= "container">
+<div class="main">
+<h1><span class = "art">ART</span> <span class="ex">EXHIBITION 2016</span></h1>
+   <div class="carousel shadow">
+      <div class="carousel-button-left"><a href="#"></a></div> 
+      <div class="carousel-button-right"><a href="#"></a></div> 
+		<div class="carousel-wrapper"> 
+		   <div class="carousel-items"> 
+			  <div class="carousel-block">
+					<img src="images/photo1.jpg "   alt="Изображение" >
+			  </div>
+			  <div class="carousel-block">
+					<img src="images/photo7.jpg"  alt="Изображение" >
+			  </div>
+			  <div class="carousel-block">
+					<img src="images/photo2.jpg" alt="Изображение" >
+			  </div>
+			  <div class="carousel-block">
+					<img src="images/photo6.jpg" alt="Изображение" >
+			  </div>
+			  <div class="carousel-block">
+					<img src="images/photo5.jpg" alt="Изображение" >
+			  </div>
+			  <div class="carousel-block">
+					<img src="images/photo3.jpg"  alt="Изображение" >
+			  </div>
+			  <div class="carousel-block">
+					<img src="images/photo4.jpg" alt="Изображение" >
+			  </div>            
+			  <div class="carousel-block"> 
+					<img src="images/photo8.jpg"  alt="Изображение" >
+			  </div>
+		   </div>
+	       </div>
+         </div>
+    </div>
+<div class="one">
+    <div class= "selections">	
+        <select id="first">
+              <option selected="selected">Buy a ticket &#9658;</option>
+              <option>1 - day</option>
+              <option>2 - day</option>
+              <option>3 - day</option>
+        </select>
 
+       <select id="second">
+              <option selected="selected">Participants &#9658;</option>
+              <option>Australia</option>
+              <option>USA</option>
+              <option>English</option>
+       </select>
 
+       <select id="third">
+              <option selected="selected">Price &#9658;</option>
+              <option>29,99$</option>
+              <option>59,99$</option>
+              <option>99,99$</option>
+       </select>
+              </div>
 
-</div>
-    <script src = "js/script.js"></script>
-</body>
+                   <div class= "one1"> <div class = box> <a href = "index1.html" target="_blank"><span class="check">Checkbox</span></a></div>
+              </div>
+          </div>
+                  <div class="menu1"><a href = "index3.html" target="_blank">Dropdown Menu</a></div></div>
+      </body>
 </html>
